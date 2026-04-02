@@ -11,7 +11,7 @@ Sets the dwm status bar using Conky system monitoring output.
 3. dwm reads the root window name and displays it as the status bar
 
 ```
-conky -c .conkyrc | dwm_setstatus
+conky -c conky.conf | dwm_setstatus
 ```
 
 ## Dependencies
@@ -35,10 +35,10 @@ sudo make uninstall
 
 ## Configuration
 
-Edit `.conkyrc` to customize displayed metrics. Default output:
+See `conky.conf` for an example configuration. Default output:
 
 ```
-CPU% :: MEM% (MEM) :: DOWN | UP :: vol VOL% :: TIME
+CPU% :: MEM% (MEM) :: DOWN UP :: TIME
 ```
 
 **Note:** The network interface (`enp4s0`) is hardware-specific. Update it to match your system:
